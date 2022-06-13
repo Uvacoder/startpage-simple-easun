@@ -1,15 +1,29 @@
+@import url(https://fonts.googleapis.com/css2?family=PT+Mono);
+
 :root {
-    --color-bg: #282828;
-    --color-fg: #EADBB2;
-    --color-link: #8F9191;
-    --color-link-visited: #668F8B;
-    --color-link-hover: #FA7921 ;
+  --color-bg: #2e3440;
+  --color-fg: #d8dee9;
+  --color-link-hover: #a3be8c;
+
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+
+  --font-family: "PT Mono", monospace;
 }
 
-html, body {
+html,
+body {
   background: var(--color-bg);
   color: var(--color-fg);
-  font-family: "Fira Code";
+  font-family: var(--font-family);
   height: 100%;
   width: 100%;
   margin: 0;
@@ -19,8 +33,7 @@ html, body {
 .container {
   display: grid;
   grid-template-columns: 1fr 460px 600px 1fr;
-  grid-template-areas:
-    ". left right .";
+  grid-template-areas: ". left right .";
   column-gap: 80px;
   justify-items: center;
   align-items: center;
@@ -47,8 +60,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 40px;
   padding-top: 60px;
+}
+
+.head h1 {
+  font-size: 36px;
 }
 
 .category {
@@ -77,20 +93,18 @@ html, body {
 li {
   font-size: 16px;
   list-style-type: none;
-  padding: 5px
+  padding: 5px;
 }
 
-a:link {
+a {
   text-decoration: none;
-  color: var(--color-link);
-}
-
-a:visited {
-  color: var(--color-link-visited);
+  color: var(--nord9);
+  transition-duration: 0.2s;
 }
 
 a:hover {
-  color: var(--color-link-hover);
+  color: var(--nord7);
+  transition-duration: 0.2s;
 }
 
 .blinking {

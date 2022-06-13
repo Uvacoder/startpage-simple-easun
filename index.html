@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>~/startpage</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap" rel="stylesheet">
+
+    <!-- anime.js -->
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +25,8 @@
 
         <div class="right-container">
             <div class="head">
-                <p>> cd ~/<span class="blinking">_</span></p>
+                <h1>> cd ~/<span class="blinking">_</span></h1>
+                <p id="temp">Loading...</p>
             </div>
 
             <div class="bookmarks">
@@ -43,7 +52,7 @@
 
                 <div class="category">
                     <div class="links">
-                        <li class="title"><a style="color: #EADBB2" href="https://reddit.com">reddit</a></li>
+                        <li class="title"><a href="https://reddit.com">reddit</a></li>
                         <li><a href="https://reddit.com/r/programming/">programming</a></li>
                         <li><a href="https://reddit.com/r/selfhosted/">selfhosted</a></li>
                         <li><a href="https://reddit.com/r/unixporn/">unixporn</a></li>
@@ -63,6 +72,8 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>
