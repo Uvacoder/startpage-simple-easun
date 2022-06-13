@@ -2,19 +2,11 @@
 
 :root {
   --color-bg: #2e3440;
+  --color-bg-light: #3b4252;
   --color-fg: #d8dee9;
-  --color-link-hover: #a3be8c;
 
-  --nord7: #8fbcbb;
-  --nord8: #88c0d0;
-  --nord9: #81a1c1;
-  --nord10: #5e81ac;
-
-  --nord11: #bf616a;
-  --nord12: #d08770;
-  --nord13: #ebcb8b;
-  --nord14: #a3be8c;
-  --nord15: #b48ead;
+  --color-link-hover: #8fbcbb;
+  --color-link: #81a1c1;
 
   --font-family: "Source Code Pro", monospace;
 }
@@ -68,20 +60,40 @@ main {
 }
 
 main #content {
-  text-align: center;
   left: 0;
   position: absolute;
-  width: 80%;
+  width: 85%;
 }
 
 main #links {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-h1 {
-  font-size: 50px;
+main #links section {
+  margin: 0 15px;
+}
+
+form {
+  font-size: 2.15vw;
+  white-space: nowrap;
+}
+
+form input {
+  width: 75%;
+  display: inline-block;
+  border: none;
+  background-color: var(--color-bg-light);
+  padding: 10px;
+  color: var(--color-fg);
+  font-family: var(--font-family);
+  font-size: 2vw;
+}
+
+form input:focus {
+  outline: none;
+
 }
 
 ul {
@@ -90,19 +102,19 @@ ul {
 }
 
 li {
-  font-size: 16px;
+  font-size: 0.9vw;
   list-style-type: none;
   margin-bottom: 10px;
 }
 
 a {
   text-decoration: none;
-  color: var(--nord9);
+  color: var(--color-link);
   transition-duration: 0.2s;
 }
 
 a:hover {
-  color: var(--nord7);
+  color: var(--color-link-hover);
   transition-duration: 0.2s;
 }
 

@@ -18,15 +18,21 @@
 <body>
     <header>
         <div id="img">
-            <img src="cat.gif" />
+            <img src="image.gif" />
         </div>
     </header>
 
     <main>
         <div id="content">
             <div id="head">
-                <h1>> cd ~/<span class="blinking">_</span></h1>
-                <p id="temp">Loading...</p>
+                <form action="https://duckduckgo.com/">
+                    <label for="q" autofocus>> find / </label>
+                    <input type="text" name="q" autocomplete="off">
+                </form>
+                <div id="info">
+                    <p id="weatherDesc">Loading...</p>
+                    <p id="temp">Loading...</p>
+                </div>
             </div>
             <div id="links">
                 <section>
@@ -65,8 +71,106 @@
         </div>
     </main>
 
+    <script type="module">
+        // ----- CHANGE THESE VARIABLES
 
-    <script src="script.js" type="module"></script>
+        // Do you want to show the weather?
+        const weather = true;
+
+        // Read the documentation for setting the weather
+        const apiKey = "[API KEY]";
+        const lon = -73.9856169;
+        const lat = 40.7580061;
+        const units = "imperial";
+
+        // ----- Don't touch anything below this unless you know what you're doing
+        var weatherEl = document.getElementById("weatherDesc");
+        var tempEl = document.getElementById("temp");
+
+        if (weather) {
+            var apiLink =
+                "https://api.openweathermap.org/data/2.5/weather?lat=" +
+                lat +
+                "&lon=" +
+                lon +
+                "&units=" +
+                units +
+                "&appid=" +
+                apiKey;
+            console.log(apiLink);
+            // grabs json data from url, thanks https://stackoverflow.com/a/35970894
+            var getJSON = function (url, callback) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.responseType = "json";
+                xhr.onload = function () {
+                    var status = xhr.status;
+                    if (status === 200) {
+                        callback(null, xhr.response);
+                    } else {
+                        callback(status, xhr.response);
+                    }
+                };
+                xhr.send();
+            };
+
+            // gets city name from weather api
+            getJSON(apiLink, function (err, data) {
+                if (err !== null) {
+                    weatherEl.innerText = "";
+                } else {
+                    var city = data.name;
+                    var temp = data.main.temp;
+                    var hiTemp = data.main.temp_max;
+                    var loTemp = data.main.temp_min;
+                    var weatherDesc = data.weather[0].description;
+                    weatherEl.innerHTML =
+                        weatherDesc + " in " + city;
+                    tempEl.innerHTML = "h: " + hiTemp + "° / c: " + temp + "° / l: " + loTemp + "°";
+                }
+            });
+        } else {
+            weatherEl.style.display = "none";
+        }
+
+        // hides all elements
+        document.querySelectorAll("*").forEach(el => el.style.opacity = 0);
+
+        // anime.js animation function
+        function playAnimation() {
+            var tl = anime.timeline({
+                easing: "easeInOutExpo",
+                duration: 2000,
+            });
+
+            tl.add({
+                targets: "#img",
+                opacity: [0, 1],
+                translateY: [100, 0],
+            })
+                .add(
+                    {
+                        targets: "#img",
+                        width: ["100%", "60%"],
+                    },
+                    "-=1200"
+                )
+                .add(
+                    {
+                        targets: "main *",
+                        opacity: [0, 1],
+                        translateY: [10, 0],
+                        delay: anime.stagger(15),
+                    },
+                    "-=1800"
+                );
+        }
+
+        window.onload = function () {
+            document.querySelectorAll("*").forEach(el => el.style.opacity = 1);
+            playAnimation();
+        }
+    </script>
 </body>
 
 </html>
