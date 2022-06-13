@@ -1,9 +1,4 @@
-import { apiKey, lat, lon, units} from "./~config.js";
-
-// var lat = 37.3092828;
-// var lon = -122.061154;
-// var units = "imperial";
-
+import { apiKey, lat, lon, units} from "./config.js";
 
 var apiLink = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=" + units + "&appid=" + apiKey;
 console.log(apiLink);
