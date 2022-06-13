@@ -9,69 +9,62 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
 
     <!-- anime.js -->
     <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="left-container">
-            <div class="gif">
-                <img src="cat.gif" />
-            </div>
+    <header>
+        <div id="img">
+            <img src="cat.gif" />
         </div>
+    </header>
 
-        <div class="right-container">
-            <div class="head">
+    <main>
+        <div id="content">
+            <div id="head">
                 <h1>> cd ~/<span class="blinking">_</span></h1>
                 <p id="temp">Loading...</p>
             </div>
-
-            <div class="bookmarks">
-                <div class="category">
-                    <div class="links">
-                        <li class="title">work</li>
-                        <li><a href="https://gmail.com">gmail</a></li>
-                        <li><a href="https://outlook.office.com">outlook</a></li>
-                        <li><a href="https://linkedin.com">linkedin</a></li>
-                        <li><a href="https://vim.rtorr.com/">vim</a></li>
-                    </div>
-                </div>
-
-                <div class="category">
-                    <div class="links">
-                        <li class="title">dev</li>
-                        <li><a href="https://github.com/">github</a></li>
-                        <li><a href="https://lobste.rs/">lobste.rs</a></li>
-                        <li><a href="https://mankier.com/">mankier</a></li>
-                        <li><a href="https://devdocs.io/">devdocs</a></li>
-                    </div>
-                </div>
-
-                <div class="category">
-                    <div class="links">
-                        <li class="title"><a href="https://reddit.com">reddit</a></li>
-                        <li><a href="https://reddit.com/r/programming/">programming</a></li>
-                        <li><a href="https://reddit.com/r/selfhosted/">selfhosted</a></li>
-                        <li><a href="https://reddit.com/r/unixporn/">unixporn</a></li>
-                        <li><a href="https://reddit.com/r/mechanicalkeyboards/">mk</a></li>
-                    </div>
-                </div>
-
-                <div class="category">
-                    <div class="links">
-                        <li class="title">play</li>
-                        <li><a href="https://monkeytype.com/">monkeytype</a></li>
-                        <li><a href="https://youtube.com/">youtube</a></li>
-                        <li><a href="https://twitch.tv/">twitch</a></li>
-                        <li><a href="https://netflix.com/">netflix</a></li>
-                    </div>
-                </div>
+            <div id="links">
+                <section>
+                    <h3>section header</h2>
+                        <ul>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                        </ul>
+                </section>
+                <section>
+                    <h3>section header</h2>
+                        <ul>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                        </ul>
+                </section>
+                <section>
+                    <h3>section header</h2>
+                        <ul>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                        </ul>
+                </section>
+                <section>
+                    <h3>section header</h2>
+                        <ul>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://example.com">website text</a></li>
+                        </ul>
+                </section>
             </div>
         </div>
-    </div>
+    </main>
+
 
     <script src="script.js" type="module"></script>
 </body>

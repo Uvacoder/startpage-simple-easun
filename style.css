@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=PT+Mono);
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
 
 :root {
   --color-bg: #2e3440;
@@ -16,11 +16,17 @@
   --nord14: #a3be8c;
   --nord15: #b48ead;
 
-  --font-family: "PT Mono", monospace;
+  --font-family: "Source Code Pro", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  text-transform: lowercase;
 }
 
 html,
 body {
+  overflow: hidden;
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-family);
@@ -30,70 +36,63 @@ body {
   padding: 0;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 460px 600px 1fr;
-  grid-template-areas: ". left right .";
-  column-gap: 80px;
-  justify-items: center;
-  align-items: center;
-  min-height: 100%;
-}
-
-.left-container {
-  grid-area: left;
-  aspect-ratio: 1/1;
-}
-
-.right-container {
-  grid-area: right;
-  height: 50%;
+header {
   width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.gif img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-}
-
-.head h1 {
-  font-size: 36px;
-}
-
-.category {
-  display: flex;
-  flex-direction: column;
-  width: 180px;
-}
-
-.bookmarks {
+header div#img {
+  width: 100%;
+  height: 100%;
+  padding: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.links {
+header div#img img {
+  width: 25vw;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  justify-content: center;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
 }
 
-.title {
-  font-size: 20px;
+main #content {
+  text-align: center;
+  left: 0;
+  position: absolute;
+  width: 80%;
+}
+
+main #links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
 }
 
 li {
   font-size: 16px;
   list-style-type: none;
-  padding: 5px;
+  margin-bottom: 10px;
 }
 
 a {

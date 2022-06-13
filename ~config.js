@@ -1,3 +1,5 @@
+export const weather = true;
+
 export const apiKey = "[API KEY]";
 export const lat = [LATITUDE];
 export const lon = [LONGITUDE];

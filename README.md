@@ -1,6 +1,16 @@
-# Startpage
+# Startpage (Nord themed)
 
-[Live Preview](https://kencx.github.io/startpage/)
+<!-- [Live Preview](https://kencx.github.io/startpage/) -->
+
+
+
+
+
+
+
+
+
+
 
 Feel free to fork and make your own changes!
 
