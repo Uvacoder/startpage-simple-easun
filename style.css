@@ -89,11 +89,27 @@ form input {
   color: var(--color-fg);
   font-family: var(--font-family);
   font-size: 2vw;
+  border-radius: 8px;
 }
 
 form input:focus {
   outline: none;
 
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+footer * {
+  height: min-content;
 }
 
 ul {
