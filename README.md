@@ -9,6 +9,7 @@
 		- [Basic Setup](#basic-setup)
 		- [Getting an OpenWeatherMap API Key](#getting-an-openweathermap-api-key)
 		- [Changing the search engine](#changing-the-search-engine)
+		- [Using as a new tab/disabling animations](#using-as-a-new-tabdisabling-animations)
 - [Browser setup](#browser-setup)
 - [Misc. Info](#misc-info)
 ## Installation
@@ -51,6 +52,19 @@ By default, the search engine is DuckDuckGo. You can change it to another search
 |Duckduckgo|`https://duckduckgo.com/`|
 |Bing|`https://bing.com/search`|
 |Ask Jeeves (why)|`https://askjeeves.net/results.html`|
+
+#### Using as a new tab/disabling animations
+This is meant as a start page, and not a new tab page because of the animations. 
+
+This [(firefox)](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) [(chrome/chromium-based)](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) extension changes the new tab page, and you can follow the directions below to 
+
+Use as a new tab (only step 3 to disable animations):
+1. Make a copy of the `index.html` file after you finished with the [basic setup](#basic-setup).
+2. Rename it to `newTab.html` (you can name it other things too, I just recommend this).
+3. Open `newTab.html` file in your code editor of choice.
+   1. In the `<script>` tag, change the `animated` variable to `false`.
+4. In the extension settings, set the new tab page to `file:///[PATH TO STARTPAGE]/newTab.html` (example: `file:///D:/documents/startpage/newTab.html`)
+
 
 ## Browser setup
 - Browser: Firefox

@@ -71,7 +71,6 @@
         </div>
     </main>
     <footer>
-        <p>made by <a href="https://github.com/eaaasun" target="_blank">easun</a></p>
         <a href="https://github.com/eaaasun/startpage">Github</a>
     </footer>
     <script type="module">
@@ -79,14 +78,17 @@
 
         // Do you want to show the weather?
         const weather = true;
+        // Do you want animations?
+        const animated = true;
 
-        // Read the documentation for setting the weather
+        // Read the documentation for setting the weather API key
         const apiKey = "[API KEY]";
         const lat = 40.7127861;
         const lon = -74.0134275;
         const units = "imperial";
 
-        // ----- Don't touch anything below this unless you know what you're doing
+        // ----- DON'T TOUCH ANYTHING BELOW THIS UNLESS YOU KNOW WHAT YOU'RE DOING
+
         var weatherEl = document.getElementById("weatherDesc");
         var tempEl = document.getElementById("temp");
 
@@ -136,42 +138,46 @@
             weatherEl.style.display = "none";
         }
 
-        // hides all elements
-        document.querySelectorAll("*").forEach(el => el.style.opacity = 0);
 
-        // anime.js animation function
-        function playAnimation() {
-            var tl = anime.timeline({
-                easing: "easeInOutExpo",
-                duration: 2000,
-            });
 
-            tl.add({
-                targets: "#img",
-                opacity: [0, 1],
-                translateY: [100, 0],
-            })
-                .add(
-                    {
-                        targets: "#img",
-                        width: ["100%", "60%"],
-                    },
-                    "-=1200"
-                )
-                .add(
-                    {
-                        targets: "main *",
-                        opacity: [0, 1],
-                        translateY: [10, 0],
-                        delay: anime.stagger(15),
-                    },
-                    "-=1800"
-                );
-        }
+        if (animated) {
+            // hides all elements
+            document.querySelectorAll("*").forEach(el => el.style.opacity = 0);
 
-        window.onload = function () {
-            document.querySelectorAll("*").forEach(el => el.style.opacity = 1);
-            playAnimation();
+            // anime.js animation function
+            function playAnimation() {
+                var tl = anime.timeline({
+                    easing: "easeInOutExpo",
+                    duration: 2000,
+                });
+
+                tl.add({
+                    targets: "#img",
+                    opacity: [0, 1],
+                    translateY: [100, 0],
+                })
+                    .add(
+                        {
+                            targets: "#img",
+                            width: ["100%", "60%"],
+                        },
+                        "-=1200"
+                    )
+                    .add(
+                        {
+                            targets: "main *",
+                            opacity: [0, 1],
+                            translateY: [10, 0],
+                            delay: anime.stagger(15),
+                        },
+                        "-=1800"
+                    );
+            }
+
+            window.onload = function () {
+                document.querySelectorAll("*").forEach(el => el.style.opacity = 1);
+                playAnimation();
+            }
         }
     </script>
 </body>
