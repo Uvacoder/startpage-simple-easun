@@ -1,6 +1,6 @@
 # Startpage <!-- omit in toc --> 
 
-[Live preview](https://startpage.easun.me)
+[Live preview (no weather as to not leak API key)](https://startpage.easun.me)
 
 
 ![startpage](startpage.gif)
@@ -21,18 +21,18 @@
 
 ### Materials
 - Code editor (e.g. VSCode, Notepad++, etc.)
-- Basic html/css/js knowledge (optional)
+- Basic html/css/js knowledge (optional, but recommended)
 - OpenWeatherMap API Key (only if you want to use the weather feature)
 
 ### Instructions
 
 #### Basic Setup
 
-1. Grab the latest [release](#)
+1. Grab the latest [release](https://github.com/eaaasun/startpage/releases/latest)
 2. Unzip files and move to a convenient location (e.g. Documents)
 3. Go into your browser settings (Firefox: `about:preferences`, Chrome/chromium-based: `chrome://settings/`)
 4. Set the homepage to `file:///[PATH TO STARTPAGE]/index.html` (example: `file:///D:/documents/startpage/index.html`)
-5. Open the homepage and check if things are working. The weather should be stuck at `loading...`. We will change that in the next step.
+5. Open the homepage and check if things are working. There will be no weather data, and we will fix as part of the next step.
 6. Open index.html in your code editor of choice.
    1. Find the `<section>` elements and replace the `website text`, `section header`, and `https://example.com` with your own links and text. You can copy-paste or delete the `<section>` elements to fit your needs (I recommend a maximum of 3-4 sections).
    2. If you want the weather to be displayed, leave the `weather` variable as-is. Otherwise, change it to `false` and skip the rest of this step.
@@ -45,8 +45,8 @@
 #### Getting an OpenWeatherMap API Key
 1. Go to [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) and sign up.
 2. Check your inbox for an email from OpenWeatherMap to verify your email address, and verify it.
-3. Go to [OpenWeatherMap](https://home.openweathermap.org/api_keys). There should be an API key already generated for you. If not, generate one. The API key name does not matter.
-4. You should now have an API key! It will take a few hours for it to be active, please do not panic if the weather is stuck on `loading...` unless it has been a day or two.
+3. Go to [the OpenWeatherMap API page](https://home.openweathermap.org/api_keys). There should be an API key already generated for you. If not, generate one. The API key name does not matter.
+4. You should now have an API key! It will take a few hours for it to be active, please do not panic if the weather does not show up unless it has been many hours.
 
 #### Changing the search engine
 By default, the search engine is DuckDuckGo. You can change it to another search engine of choice by replacing the link in the `<form>` tag with another below.
@@ -61,7 +61,7 @@ By default, the search engine is DuckDuckGo. You can change it to another search
 #### Using as a new tab/disabling animations
 This is meant as a start page, and not a new tab page because of the animations. 
 
-This [(firefox)](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) [(chrome/chromium-based)](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) extension changes the new tab page, and you can follow the directions below to 
+This [(firefox)](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) or [(chrome/chromium-based)](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) extension changes the new tab page, and you can follow the directions below use it.
 
 Use as a new tab (only step 3 to disable animations):
 1. Make a copy of the `index.html` file after you finished with the [basic setup](#basic-setup).
