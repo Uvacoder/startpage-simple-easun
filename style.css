@@ -63,6 +63,10 @@ main #content {
   left: 0;
   position: absolute;
   width: 85%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 main #links {
