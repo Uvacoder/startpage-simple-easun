@@ -70,6 +70,10 @@ main #content {
   text-align: center;
 }
 
+main #head {
+  text-align: left;
+}
+
 main #links {
   display: flex;
   flex-wrap: wrap;
