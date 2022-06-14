@@ -135,6 +135,9 @@
                     tempEl.innerHTML = "h: " + hiTemp + "° / c: " + temp + "° / l: " + loTemp + "°";
                 }
             });
+        } else {
+            weatherEl.innerText = "";
+            tempEl.innerText = "";
         }
 
 
@@ -177,9 +180,6 @@
                 document.querySelectorAll("*").forEach(el => el.style.opacity = 1);
                 playAnimation();
             }
-        } else {
-            weatherEl.innerText = "";
-            tempEl.innerText = "";
         }
     </script>
 </body>
