@@ -3,7 +3,7 @@
 [Live preview (no weather as to not leak API key)](https://startpage.easun.me)
 
 
-![startpage](startpage.gif)
+![startpage](preview.gif)
 
 
 <!-- [Live Preview](https://kencx.github.io/startpage/) -->
