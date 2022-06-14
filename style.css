@@ -67,6 +67,7 @@ main #content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 main #links {

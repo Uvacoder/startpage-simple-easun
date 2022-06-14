@@ -36,35 +36,30 @@
             </div>
             <div id="links">
                 <section>
-                    <h3>section header</h3>
+                    <h3>dev</h3>
                         <ul>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://github.com">gtihub</a></li>
+                            <li><a href="https://stackoverflow.com">stackoverflow</a></li>
+                            <li><a href="https://w3schools.com">w3schools</a></li>
                         </ul>
                 </section>
                 <section>
-                    <h3>section header</h3>
+                    <h3>socials</h3>
                         <ul>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://instagram.com">instagram</a></li>
+                            <li><a href="https://reddit.com">reddit</a></li>
+                            <li><a href="https://discord.com">discord</a></li>
+                            <li><a href="https://gmail.com">gmail</a></li>
+                            <li><a href="https://messages.google.com">gmessages</a></li>
                         </ul>
                 </section>
                 <section>
-                    <h3>section header</h3>
+                    <h3>entertainment</h3>
                         <ul>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
-                        </ul>
-                </section>
-                <section>
-                    <h3>section header</h3>
-                        <ul>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
-                            <li><a href="https://example.com">website text</a></li>
+                            <li><a href="https://youtube.com">youtube</a></li>
+                            <li><a href="https://twitch.tv">twitch</a></li>
+                            <li><a href="https://netflix.com">netflix</a></li>
+                            <li><a href="https://www.crunchyroll.com/">crunchyroll</a></li>
                         </ul>
                 </section>
             </div>
@@ -77,7 +72,7 @@
         // ----- CHANGE THESE VARIABLES
 
         // Do you want to show the weather?
-        const weather = true;
+        const weather = false;
         // Do you want animations?
         const animated = true;
 
@@ -123,6 +118,7 @@
             getJSON(apiLink, function (err, data) {
                 if (err !== null) {
                     weatherEl.innerText = "";
+                    tempEl.innerText = "";
                 } else {
                     var city = data.name;
                     var temp = data.main.temp;
@@ -135,8 +131,8 @@
                 }
             });
         } else {
-            weatherEl.style.display = "none";
-            tempEl.style.display = "none";
+            weatherEl.innerText = "";
+            tempEl.innerText = "";
         }
 
 
