@@ -123,6 +123,7 @@
             getJSON(apiLink, function (err, data) {
                 if (err !== null) {
                     weatherEl.innerText = "";
+                    tempEl.innerText = "";
                 } else {
                     var city = data.name;
                     var temp = data.main.temp;
@@ -134,9 +135,6 @@
                     tempEl.innerHTML = "h: " + hiTemp + "° / c: " + temp + "° / l: " + loTemp + "°";
                 }
             });
-        } else {
-            weatherEl.style.display = "none";
-            tempEl.style.display = "none";
         }
 
 
@@ -179,6 +177,9 @@
                 document.querySelectorAll("*").forEach(el => el.style.opacity = 1);
                 playAnimation();
             }
+        } else {
+            weatherEl.innerText = "";
+            tempEl.innerText = "";
         }
     </script>
 </body>
